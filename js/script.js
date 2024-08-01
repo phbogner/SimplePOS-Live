@@ -151,7 +151,7 @@ function initApp() {
     submit() {
       const time = new Date();
       this.isShowModalReceipt = true;
-      this.receiptNo = `TWPOS-KS-${Math.round(time.getTime() / 1000)}`;
+      this.receiptNo = `R7-VR-${Math.round(time.getTime() / 1000)}`;
       this.receiptDate = this.dateFormat(time);
     },
     closeModalReceipt() {
