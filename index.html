@@ -241,13 +241,13 @@
               <hr class="my-2">
               <div class="grid grid-cols-3 gap-2 mt-2">
                 <template x-for="money in moneys" :key="money">
-                  <button x-on:click="addCash(money)" class="bg-white rounded-lg shadow hover:shadow-lg focus:outline-none inline-block px-2 py-1 text-sm">+<span x-text="numberFormat(money)"></span></button>
+                  <button x-on:click="addCash(money)" class="bg-white rounded-lg shadow hover:shadow-lg focus:outline-none inline-block px-2 py-1 text-sm"><span x-text="numberFormat(money)"></span>€</button>
                 </template>
               </div>
             </div>
-            <div x-show="change > 0" class="flex mb-3 text-lg font-semibold bg-cyan-50 text-blue-gray-700 rounded-lg py-2 px-3">
-              <div class="text-cyan-800">RÜCKGELD</div>
-              <div class="text-right flex-grow text-cyan-600" x-text="priceFormat(change)">
+            <div x-show="change > 0" class="flex mb-3 text-lg font-semibold bg-cyan-50 text-white-7 rounded-lg py-2 px-3">
+              <div class="text-white-7">RÜCKGELD</div>
+              <div class="text-right flex-grow text-white-7" x-text="priceFormat(change)">
               </div>
             </div>
             <div x-show="change < 0" class="flex mb-3 text-lg font-semibold bg-pink-100 text-blue-gray-700 rounded-lg py-2 px-3">
@@ -263,7 +263,7 @@
                 'bg-cyan-500 hover:bg-cyan-600': submitable(),
                 'bg-blue-gray-200': !submitable()
               }" :disabled="!submitable()" x-on:click="submit()">
-              Bezahlen...
+              Transaktion abschließen
             </button>
           </div>
           <!-- end of payment info -->
