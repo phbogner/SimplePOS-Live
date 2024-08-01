@@ -2,85 +2,85 @@
     "products": [
         {
           "id": 1,
-          "name": "Beef Burger",
-          "price": 45000,
+          "name": "Hamburger",
+          "price": 9.95,
           "image": "img/beef-burger.png",
           "options": null
         },
         {
           "id": 2,
           "name": "Sandwich",
-          "price": 32000,
+          "price": 4.50,
           "image": "img/sandwich.png",
           "options": null
         },
         {
           "id": 3,
-          "name": "Sawarma",
-          "price": 30000,
+          "name": "Wrap",
+          "price": 7.00,
           "image": "img/sawarma.png",
           "options": null
         },
         {
           "id": 4,
           "name": "Croissant",
-          "price": 16000,
+          "price": 1.50,
           "image": "img/croissant.png",
           "options": null
         },
         {
           "id": 5,
-          "name": "Cinnamon Roll",
-          "price": 20000,
+          "name": "Zimtschnecke",
+          "price": 2,
           "image": "img/cinnamon-roll.png",
           "options": null
         },
         {
           "id": 6,
-          "name": "Choco Glaze Donut with Peanut",
-          "price": 10000,
+          "name": "Schoko-Nuss-Donut",
+          "price": 2,
           "image": "img/choco-glaze-donut-peanut.png",
           "options": null
         },
         {
           "id": 7,
-          "name": "Choco Glazed Donut",
-          "price": 10000,
+          "name": "Schoko-Donut",
+          "price": 2,
           "image": "img/choco-glaze-donut.png",
           "options": null
         },
         {
           "id": 8,
-          "name": "Red Glazed Donut",
-          "price": 10000,
+          "name": "Erdbeer-Donut",
+          "price": 2,
           "image": "img/red-glaze-donut.png",
           "options": null
         },
         {
           "id": 9,
           "name": "Iced Coffee Latte",
-          "price": 25000,
+          "price": 5,
           "image": "img/coffee-latte.png",
           "options": null
         },
         {
           "id": 10,
           "name": "Iced Chocolate",
-          "price": 20000,
+          "price": 5,
           "image": "img/ice-chocolate.png",
           "options": null
         },
         {
           "id": 11,
           "name": "Iced Tea",
-          "price": 15000,
+          "price": 4.50,
           "image": "img/ice-tea.png",
           "options": null
         },
         {
           "id": 12,
           "name": "Iced Matcha Latte",
-          "price": 22000,
+          "price": 6.50,
           "image": "img/matcha-latte.png",
           "options": null
         }
