@@ -105,18 +105,12 @@
             Kalte Getränke
           </button>
           &nbsp;&nbsp;&nbsp;
-          <button class="text-white rounded-2xl text-lg w-full py-3 focus:outline-none" x-bind:class="{
-                'bg-cyan-500 hover:bg-cyan-600': submitable(),
-                'bg-blue-gray-200': !submitable()
-              }" :disabled="!submitable()" x-on:click="submit()">
-            kalte Speisen
+          <button class="text-white bg-cyan-500 hover:bg-cyan-600 rounded-2xl text-lg w-full py-3 focus:outline-none" x-on:click="">
+            Heißgetränke
           </button>
           &nbsp;&nbsp;&nbsp;
-          <button class="text-white rounded-2xl text-lg w-full py-3 focus:outline-none" x-bind:class="{
-                'bg-cyan-500 hover:bg-cyan-600': submitable(),
-                'bg-blue-gray-200': !submitable()
-              }" :disabled="!submitable()" x-on:click="submit()">
-            warme Speisen
+          <button class="text-white bg-cyan-500 hover:bg-cyan-600 rounded-2xl text-lg w-full py-3 focus:outline-none" x-on:click="#">
+            Speisen
           </button>
         </div>
 
