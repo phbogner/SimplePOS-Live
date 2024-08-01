@@ -3,13 +3,13 @@ async function loadDatabase() {
     upgrade(db, oldVersion, newVersion, transaction) {
       db.createObjectStore("products", {
         keyPath: "id",
-        autoIncrement: true,
+        autoIncrement: true
       });
       db.createObjectStore("sales", {
         keyPath: "id",
-        autoIncrement: true,
+        autoIncrement: true
       });
-    },
+    }
   });
 
   return {
@@ -18,7 +18,7 @@ async function loadDatabase() {
     addProduct: async (product) => await db.add("products", product),
     editProduct: async (product) =>
       await db.put("products", product.id, product),
-    deleteProduct: async (product) => await db.delete("products", product.id),
+    deleteProduct: async (product) => await db.delete("products", product.id)
   };
 }
 
@@ -27,9 +27,9 @@ function initApp() {
     db: null,
     time: null,
     firstTime: localStorage.getItem("first_time") === null,
-    activeMenu: 'pos',
+    activeMenu: "pos",
     loadingSampleData: false,
-    moneys: [2000, 5000, 10000, 20000, 50000, 100000],
+    moneys: [1, 2, 5, 10, 20, 50, 100, 200, 500],
     products: [],
     keyword: "",
     cart: [],
@@ -80,7 +80,7 @@ function initApp() {
           name: product.name,
           price: product.price,
           option: product.option,
-          qty: 1,
+          qty: 1
         });
       } else {
         this.cart[index].qty += 1;
@@ -106,7 +106,7 @@ function initApp() {
       }
       this.updateChange();
     },
-    addCash(amount) {      
+    addCash(amount) {
       this.cash = (this.cash || 0) + amount;
       this.updateChange();
       this.beep();
@@ -140,7 +140,10 @@ function initApp() {
       this.isShowModalReceipt = false;
     },
     dateFormat(date) {
-      const formatter = new Intl.DateTimeFormat('id', { dateStyle: 'short', timeStyle: 'short'});
+      const formatter = new Intl.DateTimeFormat("id", {
+        dateStyle: "short",
+        timeStyle: "short"
+      });
       return formatter.format(date);
     },
     numberFormat(number) {
@@ -150,7 +153,7 @@ function initApp() {
         .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
     },
     priceFormat(number) {
-      return number ? `Rp. ${this.numberFormat(number)}` : `Rp. 0`;
+      return number ? `€ ${this.numberFormat(number)}` : `0.00 €`;
     },
     clear() {
       this.cash = 0;
@@ -170,12 +173,12 @@ function initApp() {
       const sound = new Audio();
       sound.src = src;
       sound.play();
-      sound.onended = () => delete(sound);
+      sound.onended = () => delete sound;
     },
     printAndProceed() {
-      const receiptContent = document.getElementById('receipt-content');
+      const receiptContent = document.getElementById("receipt-content");
       const titleBefore = document.title;
-      const printArea = document.getElementById('print-area');
+      const printArea = document.getElementById("print-area");
 
       printArea.innerHTML = receiptContent.innerHTML;
       document.title = this.receiptNo;
@@ -183,7 +186,7 @@ function initApp() {
       window.print();
       this.isShowModalReceipt = false;
 
-      printArea.innerHTML = '';
+      printArea.innerHTML = "";
       document.title = titleBefore;
 
       // TODO save sale data to database
