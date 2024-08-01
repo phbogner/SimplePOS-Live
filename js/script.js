@@ -30,6 +30,12 @@ function initApp() {
     activeMenu: "pos",
     loadingSampleData: false,
     moneys: [1, 2, 5, 10, 20, 50, 100, 200, 500],
+
+    // Neue Methode zum Formatieren der "moneys"
+    getFormattedMoneys() {
+      return this.moneys.map((money) => `${money} €`);
+    },
+
     products: [],
     keyword: "",
     cart: [],
@@ -56,8 +62,10 @@ function initApp() {
 
       this.setFirstTime(false);
     },
-        async menutest() {
-      const response = await fetch("data/colddrinks.json");
+    async colddrinks() {
+      const response = await fetch(
+        "https://phbogner.github.io/SimplePOS-Live/data/colddrinks.json"
+      );
       const data = await response.json();
       this.products = data.products;
       for (let product of data.products) {
