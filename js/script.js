@@ -57,7 +57,7 @@ function initApp() {
       this.setFirstTime(false);
     },
         async menutest() {
-      const response = await fetch("https://phbogner.github.io/SimplePOS-Live/data/sample.json");
+      const response = await fetch("data/sample.json");
       const data = await response.json();
       this.products = data.products;
       for (let product of data.products) {
