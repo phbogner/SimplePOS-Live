@@ -64,7 +64,7 @@ function initApp() {
     },
     async colddrinks() {
       const response = await fetch(
-        "https://phbogner.github.io/SimplePOS-Live/data/colddrinks.json"
+        "https://phbogner.github.io/SimplePOS-Live/data/sample.json"
       );
       const data = await response.json();
       this.products = data.products;
@@ -151,7 +151,7 @@ function initApp() {
     submit() {
       const time = new Date();
       this.isShowModalReceipt = true;
-      this.receiptNo = `R7-VR-${Math.round(time.getTime() / 1000)}`;
+      this.receiptNo = `TWPOS-KS-${Math.round(time.getTime() / 1000)}`;
       this.receiptDate = this.dateFormat(time);
     },
     closeModalReceipt() {
