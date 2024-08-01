@@ -81,8 +81,7 @@
       <!-- store menu -->
       <div class="flex flex-col bg-blue-gray-50 h-full w-full py-4">
 
-          
-          <!-- search bar -->
+        <!-- search bar -->
         <div class="flex px-2 flex-row relative">
           <div class="absolute left-5 top-3 px-2 py-2 rounded-full bg-cyan-500 text-white">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#fff">
@@ -92,22 +91,18 @@
 
           <input type="text" class="bg-white rounded-3xl shadow text-lg full w-full h-16 py-4 pl-16 transition-shadow focus:shadow-2xl focus:outline-none" placeholder="Artikel suchen..." x-model="keyword" />
         </div>
-        
-                    <div class="flex mb-3 py-1 px-1"></div>
+
+        <div class="flex mb-3 py-1 px-1"></div>
 
         <!-- item menus -->
         <div class="flex px-2 flex-row relative">
-<button class="text-white bg-cyan-500 hover:bg-cyan-600 rounded-2xl text-lg w-full py-3 focus:outline-none"
-  x-on:click="menutest()">
-  Kaltgetränke
-</button>
+          <button class="text-white bg-cyan-500 hover:bg-cyan-600 rounded-2xl text-lg w-full py-3 focus:outline-none" x-on:click="startWithSampleData()">
+            Alle Artikel
+          </button>
 
           &nbsp;&nbsp;&nbsp;
-          <button class="text-white bg-cyan-500 hover:bg-cyan-600 rounded-2xl text-lg w-full py-3 focus:outline-none" x-bind:class="{
-                'bg-cyan-500 hover:bg-cyan-600': submitable(),
-                'bg-blue-gray-200': !submitable()
-              }" :disabled="!submitable()" x-on:click="submit()">
-            Heißgetränke
+          <button class="text-white bg-cyan-500 hover:bg-cyan-600 rounded-2xl text-lg w-full py-3 focus:outline-none" x-on:click="colddrinks()">
+            Kalte Getränke
           </button>
           &nbsp;&nbsp;&nbsp;
           <button class="text-white rounded-2xl text-lg w-full py-3 focus:outline-none" x-bind:class="{
@@ -125,8 +120,6 @@
           </button>
         </div>
 
-              
-        
         <div class="h-full overflow-hidden mt-4">
           <div class="h-full overflow-y-auto px-2">
             <div class="select-none bg-blue-gray-100 rounded-3xl flex flex-wrap content-center justify-center h-full opacity-25" x-show="products.length === 0">
@@ -247,7 +240,7 @@
               </div>
               <hr class="my-2">
               <div class="grid grid-cols-3 gap-2 mt-2">
-                <template x-for="money in moneys">
+                <template x-for="money in moneys" :key="money">
                   <button x-on:click="addCash(money)" class="bg-white rounded-lg shadow hover:shadow-lg focus:outline-none inline-block px-2 py-1 text-sm">+<span x-text="numberFormat(money)"></span></button>
                 </template>
               </div>
