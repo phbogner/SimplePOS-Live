@@ -3,8 +3,8 @@
 
 <head>
   <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="pragma" content="no-cache" />
-<meta http-equiv="expires" content="0" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,9 +23,9 @@
     <!-- left sidebar -->
     <div class="flex flex-row w-auto flex-shrink-0 pl-4 pr-2 py-4">
       <div class="flex flex-col items-center py-4 flex-shrink-0 w-20 bg-cyan-500 rounded-3xl">
-       <!-- <a href="#" class="flex items-center justify-center h-12 w-12 bg-cyan-50 text-cyan-700 rounded-full"></a>-->
-          <img src="https://phbogner.github.io/SimplePOS-Live/img/vr-logo.png" width="50" border="0">
-        
+        <!-- <a href="#" class="flex items-center justify-center h-12 w-12 bg-cyan-50 text-cyan-700 rounded-full"></a>-->
+        <img src="https://phbogner.github.io/SimplePOS-Live/img/vr-logo.png" width="50" border="0">
+
         <ul class="flex flex-col space-y-2 mt-12">
           <li>
             <a href="#" class="flex items-center">
@@ -81,7 +81,8 @@
       <!-- store menu -->
       <div class="flex flex-col bg-blue-gray-50 h-full w-full py-4">
 
-        <!-- search bar -->
+          
+          <!-- search bar -->
         <div class="flex px-2 flex-row relative">
           <div class="absolute left-5 top-3 px-2 py-2 rounded-full bg-cyan-500 text-white">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#fff">
@@ -89,9 +90,43 @@
             </svg>
           </div>
 
-          
           <input type="text" class="bg-white rounded-3xl shadow text-lg full w-full h-16 py-4 pl-16 transition-shadow focus:shadow-2xl focus:outline-none" placeholder="Artikel suchen..." x-model="keyword" />
         </div>
+        
+                    <div class="flex mb-3 py-1 px-1"></div>
+
+        <!-- item menus -->
+        <div class="flex px-2 flex-row relative">
+<button class="text-white bg-cyan-500 hover:bg-cyan-600 rounded-2xl text-lg w-full py-3 focus:outline-none"
+  x-on:click="menutest()">
+  Kaltgetränke
+</button>
+
+          &nbsp;&nbsp;&nbsp;
+          <button class="text-white bg-cyan-500 hover:bg-cyan-600 rounded-2xl text-lg w-full py-3 focus:outline-none" x-bind:class="{
+                'bg-cyan-500 hover:bg-cyan-600': submitable(),
+                'bg-blue-gray-200': !submitable()
+              }" :disabled="!submitable()" x-on:click="submit()">
+            Heißgetränke
+          </button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="text-white rounded-2xl text-lg w-full py-3 focus:outline-none" x-bind:class="{
+                'bg-cyan-500 hover:bg-cyan-600': submitable(),
+                'bg-blue-gray-200': !submitable()
+              }" :disabled="!submitable()" x-on:click="submit()">
+            kalte Speisen
+          </button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="text-white rounded-2xl text-lg w-full py-3 focus:outline-none" x-bind:class="{
+                'bg-cyan-500 hover:bg-cyan-600': submitable(),
+                'bg-blue-gray-200': !submitable()
+              }" :disabled="!submitable()" x-on:click="submit()">
+            warme Speisen
+          </button>
+        </div>
+
+              
+        
         <div class="h-full overflow-hidden mt-4">
           <div class="h-full overflow-y-auto px-2">
             <div class="select-none bg-blue-gray-100 rounded-3xl flex flex-wrap content-center justify-center h-full opacity-25" x-show="products.length === 0">
