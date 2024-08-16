@@ -1,0 +1,60 @@
+{
+    "products": [
+        {
+          "id": 1,
+          "name": "Hamburger",
+          "price": 12,
+          "image": "img/beef-burger.png",
+          "options": null
+        },
+        {
+          "id": 2,
+          "name": "Sandwich",
+          "price": 5,
+          "image": "img/sandwich.png",
+          "options": null
+        },
+        {
+          "id": 3,
+          "name": "Wrap",
+          "price": 7,
+          "image": "img/sawarma.png",
+          "options": null
+        },
+        {
+          "id": 4,
+          "name": "Croissant",
+          "price": 1,
+          "image": "img/croissant.png",
+          "options": null
+        },
+        {
+          "id": 5,
+          "name": "Zimtschnecke",
+          "price": 2,
+          "image": "img/cinnamon-roll.png",
+          "options": null
+        },
+        {
+          "id": 6,
+          "name": "Schoko-Nuss-Donut",
+          "price": 2,
+          "image": "img/choco-glaze-donut-peanut.png",
+          "options": null
+        },
+        {
+          "id": 7,
+          "name": "Schoko-Donut",
+          "price": 2,
+          "image": "img/choco-glaze-donut.png",
+          "options": null
+        },
+        {
+          "id": 8,
+          "name": "Erdbeer-Donut",
+          "price": 2,
+          "image": "img/red-glaze-donut.png",
+          "options": null
+        }
+    ]
+}
