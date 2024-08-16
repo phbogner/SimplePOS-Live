@@ -1,0 +1,25 @@
+{
+    "products": [
+        {
+          "id": 10,
+          "name": "Iced Chocolate",
+          "price": 5,
+          "image": "img/ice-chocolate.png",
+          "options": null
+        },
+        {
+          "id": 11,
+          "name": "Iced Tea",
+          "price": 4,
+          "image": "img/ice-tea.png",
+          "options": null
+        },
+        {
+          "id": 12,
+          "name": "Iced Matcha Latte",
+          "price": 5,
+          "image": "img/matcha-latte.png",
+          "options": null
+        }
+    ]
+}
