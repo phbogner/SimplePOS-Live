@@ -64,7 +64,7 @@ function initApp() {
     },
     async colddrinks() {
       const response = await fetch(
-        "https://phbogner.github.io/SimplePOS-Live/data/sample.json"
+        "https://phbogner.github.io/SimplePOS-Live/data/colddrinks.json"
       );
       const data = await response.json();
       this.products = data.products;
