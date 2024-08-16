@@ -60,11 +60,35 @@ function initApp() {
         await this.db.addProduct(product);
       }
 
-      this.setFirstTime(false);
+      this.setFirstTime(true);
     },
     async colddrinks() {
       const response = await fetch(
-        "https://phbogner.github.io/SimplePOS-Live/data/sample.json"
+        "https://phbogner.github.io/SimplePOS-Live/data/colddrinks.json"
+      );
+      const data = await response.json();
+      this.products = data.products;
+      for (let product of data.products) {
+        await this.db.addProduct(product);
+      }
+
+      this.setFirstTime(false);
+    },
+        async hotdrinks() {
+      const response = await fetch(
+        "https://phbogner.github.io/SimplePOS-Live/data/hotdrinks.json"
+      );
+      const data = await response.json();
+      this.products = data.products;
+      for (let product of data.products) {
+        await this.db.addProduct(product);
+      }
+
+      this.setFirstTime(false);
+    },
+        async speisen() {
+      const response = await fetch(
+        "https://phbogner.github.io/SimplePOS-Live/data/speisen.json"
       );
       const data = await response.json();
       this.products = data.products;
